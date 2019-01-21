@@ -32,7 +32,7 @@ class Home extends Component {
         )
       })
     ) : (
-      <div className="center">Gak ada post</div>
+      <div className="center">loading..</div>
     )
     return (
       <div className="container">
