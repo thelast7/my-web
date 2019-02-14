@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from "react";
+import axios from "axios";
 
 class Post extends Component {
   state = {
     post: null
-  }
+  };
 
-  componentDidMount(){
-    let id = this.props.match.params.post_id
-    axios.get('http://jsonplaceholder.typicode.com/posts/' + id)
-    .then(res=> {
+  componentDidMount() {
+    let id = this.props.match.params.post_id;
+    axios.get("http://jsonplaceholder.typicode.com/posts/" + id).then(res => {
       this.setState({
         post: res.data
-      })
-    })
+      });
+    });
   }
 
   render() {
@@ -24,13 +23,9 @@ class Post extends Component {
       </div>
     ) : (
       <div className="center">Loading..</div>
-    )
-    return (
-      <div className="container">
-        {post}
-      </div>
-    )
+    );
+    return <div className="container">{post}</div>;
   }
 }
 
-export default Post
+export default Post;

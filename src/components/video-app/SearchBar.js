@@ -13,13 +13,14 @@ class SearchBar extends Component {
 
   onSubmitChange = e => {
     e.preventDefault();
+    this.props.onTermSubmit(this.state.term);
   };
 
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form className="ui form" onSubmit={this.onSubmitChange}>
-          <div className="field">
+      <div className="search-bar">
+        <form onSubmit={this.onSubmitChange}>
+          <div>
             <label>Cari Video</label>
             <input
               type="text"
