@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Todos from "./components/Todos";
 import Post from "./components/Post";
+import Videos from "./components/Videos";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/todos" component={Todos} />
+            <Route path="/videos" component={Videos} />
             <Route path="/:post_id" component={Post} />
           </Switch>
         </div>

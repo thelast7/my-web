@@ -1,10 +1,10 @@
 import React from "react";
 
 const TodoList = ({ todos }) => {
-  const ListTodo = todos.length ? (
+  const listtodo = todos.length ? (
     todos.map(todo => {
       return (
-        <div className="item-collection">
+        <div className="collection-item" key={todo.id}>
           <span>{todo.content}</span>
         </div>
       );
@@ -13,7 +13,7 @@ const TodoList = ({ todos }) => {
     <p className="center">aman</p>
   );
 
-  return <div className="todo collection">{ListTodo}</div>;
+  return <div className="todo collection">{listtodo}</div>;
 };
 
 export default TodoList;
